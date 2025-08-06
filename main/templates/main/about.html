@@ -1,0 +1,94 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+
+<!-- About Section -->
+<div class="row align-items-center mb-5">
+    <div class="col-md-5 text-center mb-3">
+        <img src="{% static 'main/images/vraj.jpg' %}" 
+             class="img-fluid about-photo" 
+             alt="Vraj Vekariya">
+    </div>
+    <div class="col-md-7">
+       <h2>About Me</h2>
+<p>Hello! I'm <strong>Vraj Vekariya</strong>, a BE-IT student at GTU, deeply passionate about developing modern, efficient, and user-centric web applications.</p>
+
+<p>With a solid foundation in <strong>Python</strong> and <strong>Django</strong>, I specialize in building full-stack web solutions that combine robust backend logic with responsive and elegant frontends using <strong>HTML/CSS, Bootstrap, Angular,</strong> and <strong>Node.js</strong>.</p>
+
+<p>Beyond web development, I’m highly interested in <strong>Artificial Intelligence</strong> and <strong>Machine Learning</strong>. I actively apply AI in real-world scenarios—whether it’s creating intelligent chatbots, recommendation systems, or analyzing user data to drive smart decisions.</p>
+
+<p>I thrive in problem-solving environments and love working on projects that create real impact. I’m always excited to learn emerging technologies and contribute to innovative, tech-driven solutions.</p>
+    </div>
+</div>
+
+<!-- Skills Section -->
+<hr class="my-5">
+<h3 class="text-center mb-4">My Technical Skills</h3>
+<div class="row text-center">
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Frontend</h5>
+                <p class="card-text">HTML, CSS, Bootstrap, Angular</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Backend</h5>
+                <p class="card-text">Python, Django, Node.js, REST API</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">AI / ML</h5>
+                <p class="card-text">Pandas, NumPy, Scikit-learn, Deep Learning</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Databases</h5>
+                <p class="card-text">MySQL, PostgreSQL, SQLite, ER Diagrams</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Projects & Internships -->
+<hr class="my-5">
+<h3 class="text-center mb-4">Projects & Internships</h3>
+<div class="row text-center">
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Internship Projects</h5>
+                <p class="card-text">Django blog system, portfolio with admin panel, AI dashboard</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Academic Projects</h5>
+                <p class="card-text">Resume builder, weather app, static portfolio, chatbot</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title">Personal Projects</h5>
+                <p class="card-text">Blog CMS, ML integrations in Django, portfolio hosting</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

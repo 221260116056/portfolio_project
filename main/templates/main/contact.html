@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 text-center">Contact Me</h2>
+
+<div class="row">
+    <!-- Contact Form - Left -->
+    <div class="col-md-6 mb-4">
+        <div class="p-4 shadow-sm bg-white rounded">
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Your Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Personal Info - Right -->
+    <div class="col-md-6">
+        <div class="p-4 shadow-sm bg-white rounded">
+            <h4 class="mb-3">My Contact Info</h4>
+            <p><strong>Name:</strong> Vraj Vekariya</p>
+            <p><strong>Phone:</strong> <a href="tel:+919313385318">+91 93133 85318</a></p>
+            <p><strong>Email:</strong> <a href="mailto:vekariyavraj760@gmail.com">vekariyavraj760@gmail.com</a></p>
+            <p><strong>Address:</strong> Nikol, Ahmedabad - 382350</p>
+
+            <!-- Social Buttons -->
+            <div class="mt-4">
+                <a href="https://www.instagram.com/vraj_vekariya123/?hl=en" class="btn btn-outline-danger me-2 mb-2" target="_blank">📸 Instagram</a>
+                <a href="https://wa.me/919313385318" class="btn btn-success me-2 mb-2" target="_blank">💬 WhatsApp</a>
+                <a href="https://www.linkedin.com/in/vekariya-vraj-dipakkumar-19a842373/" class="btn btn-outline-primary mb-2" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

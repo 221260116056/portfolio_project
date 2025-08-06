@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">My Projects</h2>
+<div class="row">
+
+    <!-- Energy Chatbot (Flask Project) -->
+    <div class="col-md-6 offset-md-3 mb-4">
+        <div class="card h-100 shadow">
+            <img src="{% static 'main/images/energy_chatbot.png' %}" class="card-img-top" alt="Energy Chatbot">
+            <div class="card-body text-center">
+                <h5 class="card-title">⚡ Energy Chatbot</h5>
+                <p class="card-text">
+                    An AI-powered chatbot built using <strong>Python & Flask</strong> that provides intelligent answers to energy-related queries. Deployed using Render.
+                </p>
+                <a href="https://github.com/Yash2774-ai/energy-chatbot.git" class="btn btn-sm btn-primary" target="_blank">GitHub</a>
+                <a href="https://energy-chatbot.onrender.com/" class="btn btn-sm btn-outline-success" target="_blank">Live Demo</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Animate.css for popup animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+    <style>
+        .hero-section {
+            position: relative;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: "";
+            background-image: url("{% static 'main/images/laptop.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            text-shadow: 1px 1px 5px #000;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+        }
+
+        .hero-content .btn {
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Vraj</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="/services/">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact/">Contact</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-content">
+        <h1><span class="text-warning">👋 I'm Vraj Vekariya</span></h1>
+        <p>Python & Django Developer | AI Enthusiast</p>
+        <a href="mailto:vekariyavraj760@gmail.com" class="btn btn-primary">📧 Mail Me</a>
+        <a href="https://linkedin.com/in/vekariya-vraj-dipakkumar-19a842373" target="_blank" class="btn btn-primary text-white">🔗 LinkedIn</a>
+    </div>
+</div>
+
+<!-- Welcome Modal Popup -->
+<div class="modal fade" id="welcomeModal" tabindex="-1" aria-labelledby="welcomeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center animate__animated animate__fadeInDown">
+      <div class="modal-header">
+        <h5 class="modal-title w-100" id="welcomeModalLabel">Welcome!</h5>
+      </div>
+      <div class="modal-body">
+        👋 Hello! I'm <span class="text-warning fw-bold">Vraj Vekariya</span><br>
+        <small>Python & Django Developer | AI Enthusiast</small>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Get Started</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-3 mt-5 bg-dark text-white">
+  &copy; 2025 Vraj Vekariya | Built with Django & Bootstrap
+</footer>
+
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'main/js/script.js' %}"></script>
+
+<!-- Script to trigger welcome popup -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+    welcomeModal.show();
+
+    // Auto-close after 5 seconds
+    setTimeout(() => {
+      welcomeModal.hide();
+    }, 5000);
+  });
+</script>
+
+</body>
+</html>

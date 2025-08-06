@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Blog Title -->
+    <h2 class="text-center mb-3">{{ post.title }}</h2>
+
+    <!-- Blog Image -->
+    {% if post.image %}
+    <img src="{{ post.image.url }}" class="img-fluid mb-4 d-block mx-auto" alt="{{ post.title }}">
+    {% endif %}
+
+    <!-- Date -->
+    <p class="text-muted text-center">Posted on {{ post.created_at|date:"M d, Y" }}</p>
+
+    <!-- Blog Content -->
+    <p style="white-space: pre-line;">{{ post.content }}</p>
+
+    <!-- Back to blog button -->
+    <div class="text-center mt-4">
+        <a href="{% url 'blog-home' %}" class="btn btn-secondary">← Back to Blog</a>
+    </div>
+
+    <hr>
+
+    <!-- Comments Section -->
+    <div class="mt-5">
+        <h4>💬 Comments ({{ comments.count }})</h4>
+
+        {% if comments %}
+            {% for comment in comments %}
+                <div class="border rounded p-3 my-2">
+                    <strong>{{ comment.name }}</strong>
+                    <small class="text-muted float-end">{{ comment.created_at|date:"M d, Y H:i" }}</small>
+                    <p class="mt-2 mb-0">{{ comment.comment_text }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="text-muted">No comments yet.</p>
+        {% endif %}
+    </div>
+
+    <!-- Comment Form -->
+    <div class="mt-5">
+        <h4>✍️ Leave a Comment</h4>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.name.label_tag }} {{ form.name }}
+            </div>
+            <div class="mb-3">
+                {{ form.comment_text.label_tag }} {{ form.comment_text }}
+            </div>
+            <button type="submit" class="btn btn-primary">Post Comment</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

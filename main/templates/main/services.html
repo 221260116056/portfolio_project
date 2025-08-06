@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}Services{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">💼 My Services</h2>
+    <div class="row text-center">
+        <!-- Web Dev -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Web Development</h5>
+                    <p class="card-text">Responsive sites using Django, Bootstrap, HTML/CSS, and Angular.</p>
+                </div>
+            </div>
+        </div>
+        <!-- AI & ML -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">AI & Machine Learning</h5>
+                    <p class="card-text">Custom AI models, ML integration, and chatbot systems.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Backend -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Database & Backend</h5>
+                    <p class="card-text">Database design, API development, and Django admin solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
